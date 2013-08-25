@@ -1,7 +1,7 @@
 *.class
 
 /build
-
+/resource/assets/microblock
 # Package Files #
 *.jar
 *.war
