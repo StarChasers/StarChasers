@@ -9,7 +9,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-public class BlockMPZ extends Block{
+public class BlockMPZ extends Block {
 
 	public BlockMPZ(int id) {
 		super(id, Material.iron);
@@ -23,14 +23,14 @@ public class BlockMPZ extends Block{
 			int par4, EntityPlayer par5EntityPlayer, int par6, float par7,
 			float par8, float par9) {
 		par5EntityPlayer.addExperience(1000);
-		TileEntity tmp = par1World.getBlockTileEntity(par2, par3, par4);
-		if(tmp!=null && tmp instanceof TileEntityMPZ){
-			((TileEntityMPZ)tmp).onBlockActivated(par1World,par2,par3,
-					 par4, par5EntityPlayer,par6,par7,
-					par8,par9);
+		if (!par1World.isRemote) {
+			TileEntity tmp = par1World.getBlockTileEntity(par2, par3, par4);
+			if (tmp != null && tmp instanceof TileEntityMPZ) {
+				((TileEntityMPZ) tmp).activated(par1World, par5EntityPlayer);
+			}
 		}
-		return super.onBlockActivated(par1World, par2, par3, par4, par5EntityPlayer,
-				par6, par7, par8, par9);
+		return super.onBlockActivated(par1World, par2, par3, par4,
+				par5EntityPlayer, par6, par7, par8, par9);
 	}
 
 	@Override
@@ -42,6 +42,5 @@ public class BlockMPZ extends Block{
 	public TileEntity createTileEntity(World world, int metadata) {
 		return new TileEntityMPZ();
 	}
-
 
 }
