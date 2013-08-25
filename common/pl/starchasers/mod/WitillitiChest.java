@@ -11,12 +11,12 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.SidedProxy;
 
-@Mod(modid = "WitillitiChest", name = "Witilliti Chest", version = "0.0.0")
+@Mod(modid = "Starchasers", name = "StarchasersMOD", version = "0.0.0")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class WitillitiChest {
-	@Instance("WitillitiChest")
+	@Instance("Starchasers")
 	public static WitillitiChest instance;
-	@SidedProxy(modId = "WitillitiChest", clientSide = "pl.starchasers.mod.client.ClientProxy", serverSide = "pl.starchasers.mod.CommonProxy")
+	@SidedProxy(modId = "Starchasers", clientSide = "pl.starchasers.mod.client.ClientProxy", serverSide = "pl.starchasers.mod.CommonProxy")
 	public static CommonProxy proxy;
 
 	@EventHandler
@@ -34,7 +34,7 @@ public class WitillitiChest {
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-		System.out.println("Mod WitillitiChest Loaded");
+		System.out.println("Mod Starchasers Loaded");
 
 	}
 

@@ -25,6 +25,7 @@ public class BlockWitillitiChest extends BlockContainer {
 		super(id, Material.wood);
 		this.setCreativeTab(CreativeTabs.tabDecorations);
 		this.setHardness(3.0F);
+		this.setUnlocalizedName("witilliti Chest");
 	}
 
 	@Override

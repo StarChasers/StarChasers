@@ -7,7 +7,7 @@ import net.minecraftforge.common.Configuration;
 public class Config extends Configuration {
 	public static Config instance = null;  
     public int witillitichestID;
-    
+    public int MPZID;
     public Config(File file){
         
         super(file);
@@ -19,7 +19,7 @@ public class Config extends Configuration {
         super.load();
         
         witillitichestID = getBlock("witillitichest", 1001).getInt();
-        
+        MPZID = getBlock("MPZ", 1002).getInt();
     }
     
     public void save(){
