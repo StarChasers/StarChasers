@@ -2,6 +2,7 @@ package pl.starchasers.mod;
 
 import pl.starchasers.mod.block.BlockMPZ;
 import pl.starchasers.mod.block.BlockWitillitiChest;
+import pl.starchasers.mod.crystals.items.ItemSeedCrystal;
 import pl.starchasers.mod.tileentity.TileEntityMPZ;
 import pl.starchasers.mod.tileentity.TileEntityWitillitiChest;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -12,9 +13,13 @@ public class BlockManager {
 	public static BlockManager instance;
 	public final BlockWitillitiChest witillitiChestBlock = new BlockWitillitiChest(Registry.getBlockID("WitillitiChest"));
 	public final BlockMPZ mpz = new BlockMPZ(Registry.getBlockID("MPZ"));
+	
+	
 	public BlockManager(){
 		instance = this;
 	}
+	
+	//TODO ITEM & BLOCK MANAGER/API
 	public void registerBlocks(){
 		
 

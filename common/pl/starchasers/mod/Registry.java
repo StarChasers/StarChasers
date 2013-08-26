@@ -21,11 +21,11 @@ public class Registry {
 	
 	public static void init(){
 		itemsIds = StarChasers.config.getTag("ItemsIDs", true);
-		itemsIds.setComment("Items IDs");
+		itemsIds.setComment("Items IDs").useBraces();
 		itemsIds.setBaseID(10000);
 		
 		blocksIds = StarChasers.config.getTag("BlocksIDs", true);
-		blocksIds.setComment("Blocks IDs");
+		blocksIds.setComment("Blocks IDs").useBraces();
 		blocksIds.setBaseID(1000);
 		
 	}

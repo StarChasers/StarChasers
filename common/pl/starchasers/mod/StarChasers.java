@@ -2,6 +2,7 @@ package pl.starchasers.mod;
 
 import codechicken.lib.config.ConfigFile;
 import pl.starchasers.mod.client.gui.GuiHandler;
+import pl.starchasers.mod.crystals.CrystalProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -26,7 +27,7 @@ public class StarChasers {
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		
+		proxy.preInit();
 		config = new ConfigFile(event.getSuggestedConfigurationFile());
 		Registry.init();
 
@@ -37,6 +38,7 @@ public class StarChasers {
 		new BlockManager();
 		BlockManager.instance.registerBlocks();
 		NetworkRegistry.instance().registerGuiHandler(this, new GuiHandler());
+		proxy.load();
 	}
 
 	@EventHandler
