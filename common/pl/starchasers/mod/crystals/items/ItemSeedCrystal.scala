@@ -18,5 +18,6 @@ class ItemSeedCrystal(id:Int) extends Item (id) with TItemMultiPart {
     
     this.setCreativeTab(CreativeTabs.tabDecorations);
     this.setUnlocalizedName("item.crystal.seed")
+    //this.func_111206_d(x$1)
     
 }
