@@ -4,7 +4,7 @@ import java.text.BreakIterator;
 
 import javax.tools.Tool;
 
-import pl.starchasers.mod.WitillitiChest;
+import pl.starchasers.mod.StarChasers;
 import pl.starchasers.mod.tileentity.TileEntityWitillitiChest;
 
 import net.minecraft.block.Block;
@@ -33,7 +33,7 @@ public class BlockWitillitiChest extends BlockContainer {
 			int par4, EntityPlayer par5EntityPlayer, int par6, float par7,
 			float par8, float par9) {
 		// TODO Auto-generated method stub
-		par5EntityPlayer.openGui(WitillitiChest.instance, 0, par1World, par2, par3, par4);
+		par5EntityPlayer.openGui(StarChasers.instance, 0, par1World, par2, par3, par4);
 		return true;
 	}
 

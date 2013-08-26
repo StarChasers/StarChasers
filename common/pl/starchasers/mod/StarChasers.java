@@ -1,5 +1,6 @@
 package pl.starchasers.mod;
 
+import codechicken.lib.config.ConfigFile;
 import pl.starchasers.mod.client.gui.GuiHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -13,15 +14,21 @@ import cpw.mods.fml.common.SidedProxy;
 
 @Mod(modid = "Starchasers", name = "StarchasersMOD", version = "0.0.0")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
-public class WitillitiChest {
+public class StarChasers {
+	
 	@Instance("Starchasers")
-	public static WitillitiChest instance;
+	public static StarChasers instance;
+	
 	@SidedProxy(modId = "Starchasers", clientSide = "pl.starchasers.mod.client.ClientProxy", serverSide = "pl.starchasers.mod.CommonProxy")
 	public static CommonProxy proxy;
+	
+	public static ConfigFile config = null;
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		new Config(event.getSuggestedConfigurationFile());
+		
+		config = new ConfigFile(event.getSuggestedConfigurationFile());
+		Registry.init();
 
 	}
 

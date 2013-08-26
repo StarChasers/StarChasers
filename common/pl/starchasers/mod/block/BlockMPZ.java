@@ -23,11 +23,11 @@ public class BlockMPZ extends Block {
 			int par4, EntityPlayer par5EntityPlayer, int par6, float par7,
 			float par8, float par9) {
 		par5EntityPlayer.addExperience(1000);
-		if (!par1World.isRemote) {
+		
 			TileEntity tmp = par1World.getBlockTileEntity(par2, par3, par4);
 			if (tmp != null && tmp instanceof TileEntityMPZ) {
 				((TileEntityMPZ) tmp).activated(par1World, par5EntityPlayer);
-			}
+			
 		}
 		return super.onBlockActivated(par1World, par2, par3, par4,
 				par5EntityPlayer, par6, par7, par8, par9);

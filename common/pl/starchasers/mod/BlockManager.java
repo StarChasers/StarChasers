@@ -10,8 +10,8 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class BlockManager {
 	
 	public static BlockManager instance;
-	public final BlockWitillitiChest witillitiChestBlock = new BlockWitillitiChest(Config.instance.witillitichestID);
-	public final BlockMPZ mpz = new BlockMPZ(Config.instance.MPZID);
+	public final BlockWitillitiChest witillitiChestBlock = new BlockWitillitiChest(Registry.getBlockID("WitillitiChest"));
+	public final BlockMPZ mpz = new BlockMPZ(Registry.getBlockID("MPZ"));
 	public BlockManager(){
 		instance = this;
 	}
